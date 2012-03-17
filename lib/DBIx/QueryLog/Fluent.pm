@@ -2,9 +2,27 @@ package DBIx::QueryLog::Fluent;
 use 5.008_001;
 use strict;
 use warnings;
+use Fluent::Logger;
+use DBIx::QueryLog;
 
 our $VERSION = '0.01';
 
+my $logger;
+
+sub logger {
+    my $self = shift;
+    my %params = @_;
+    $logger = Fluent::Logger->new(%params);
+};
+
+$DBIx::QueryLog::OUTPUT = sub {
+    my %params = @_;
+    $logger = Fluent::Logger->new unless $logger;
+
+    my $level = $params{level};
+    map { delete $params{$_} } qw/level dbh message localtime bind_params/;
+    $logger->post("query.$level" => \%params);
+};
 
 1;
 __END__
