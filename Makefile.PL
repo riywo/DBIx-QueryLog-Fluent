@@ -28,6 +28,7 @@ all_from 'lib/DBIx/QueryLog/Fluent.pm';
 
 requires 'DBIx::QueryLog' => '0.27';
 requires 'Fluent::Logger'   => '0.04';
+recommends 'DBD::sqlite';
 
 test_requires 'Test::More'        => '0.88';
 test_requires 'Test::Requires'    => '0.06';
