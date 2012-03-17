@@ -1,0 +1,39 @@
+This is Perl module DBIx::QueryLog::Fluent.
+
+INSTALLATION
+
+Type the following command:
+
+    $ curl -L http://cpanmin.us | perl - DBIx::QueryLog::Fluent
+
+Or install cpanm and then run the following command to install
+DBIx::QueryLog::Fluent:
+
+    $ cpanm DBIx::QueryLog::Fluent
+
+If you get an archive of this distribution, unpack it and build it
+as per the usual:
+
+    $ tar xzf DBIx-QueryLog-Fluent-$version.tar.gz
+    $ cd DBIx-QueryLog-Fluent-$version
+    $ perl Makefile.PL
+    $ make && make test
+
+Then install it:
+
+    $ make install
+
+DOCUMENTATION
+
+DBIx::QueryLog::Fluent documentation is available as in POD. So you can do:
+
+    $ perldoc DBIx::QueryLog::Fluent
+
+to read the documentation online with your favorite pager.
+
+LICENSE AND COPYRIGHT
+
+Copyright (c) 2012, riywo. All rights reserved.
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
