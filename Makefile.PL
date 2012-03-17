@@ -26,9 +26,13 @@ use inc::Module::Install;
 
 all_from 'lib/DBIx/QueryLog/Fluent.pm';
 
+requires 'DBIx::QueryLog' => '0.27';
+requires 'Fluent::Logger'   => '0.04';
 
-test_requires 'Test::More'     => '0.88';
-test_requires 'Test::Requires' => '0.06';
+test_requires 'Test::More'        => '0.88';
+test_requires 'Test::Requires'    => '0.06';
+test_requires 'Test::TCP'         => 1.13;
+test_requires 'Test::SharedFork';
 
 auto_set_repository;
 
