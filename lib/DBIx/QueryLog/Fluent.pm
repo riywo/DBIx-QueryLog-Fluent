@@ -38,10 +38,14 @@ This document describes DBIx::QueryLog::Fluent version 0.01.
 =head1 SYNOPSIS
 
     use DBIx::QueryLog::Fluent;
+    DBIx::QueryLog::Fluent->logger(
+        host => '127.0.0.1',
+        port => 24224,
+    );
 
 =head1 DESCRIPTION
 
-# TODO
+DBIx::QueryLog::Fluent is a query log module sending to fluentd
 
 =head1 INTERFACE
 
